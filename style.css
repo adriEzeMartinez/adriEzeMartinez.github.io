@@ -274,3 +274,26 @@ footer {
   nav a { margin-left: 18px; font-size: 14px; }
   .certs { grid-template-columns: 1fr; }
 }
+
+/* Selector de idioma */
+.nav-right { display: flex; align-items: center; gap: 28px; }
+.nav-right nav a { margin-left: 0; margin-right: 28px; }
+.nav-right nav a:last-child { margin-right: 0; }
+nav a[aria-current="page"] { color: var(--gold); }
+.lang { display: flex; gap: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+.lang a {
+  display: inline-flex; align-items: center; gap: 6px;
+  text-decoration: none; color: var(--gray); padding: 4px 8px;
+  border: 1px solid transparent; border-radius: var(--radius);
+}
+.lang .flag {
+  width: 18px; height: 12px; flex: none; border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(11, 37, 69, 0.18);
+}
+.lang a:hover { color: var(--gold); }
+.lang a[aria-current="true"] { color: var(--navy); border-color: var(--gold); background: var(--gold-bg); }
+@media (max-width: 640px) {
+  .nav-wrap { flex-wrap: wrap; gap: 12px; }
+  .nav-right { gap: 14px; flex-wrap: wrap; }
+  .nav-right nav a { margin-right: 16px; }
+}
